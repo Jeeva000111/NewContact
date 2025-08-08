@@ -1,210 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jeevanantham Sankaran — Contact</title>
-  <meta name="description" content="Contact card for Jeevanantham Sankaran" />
-  <meta name="theme-color" content="#0f172a" />
-
-  <!-- Open Graph (nice preview if you share the page) -->
-  <meta property="og:title" content="Jeevanantham Sankaran — Contact" />
-  <meta property="og:description" content="Phone, Email, and LinkedIn" />
-  <meta property="og:type" content="website" />
 
   <style>
-    :root{
-      --bg: #0b1220;
-      --card:#111827;
-      --text:#e5e7eb;
-      --muted:#9ca3af;
-      --accent:#60a5fa;
-      --ring:#334155;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    @media (prefers-color-scheme: light) {
-      :root{
-        --bg:#f7fafc;
-        --card:#ffffff;
-        --text:#0f172a;
-        --muted:#475569;
-        --accent:#2563eb;
-        --ring:#e5e7eb;
-      }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 800px at 70% -10%, #1f2937 0, var(--bg) 60%);
-      color:var(--text);
-      display:grid;
-      place-items:center;
-      padding:24px;
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 40px 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      text-align: center;
+      max-width: 380px;
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.15);
     }
-    .card{
-      width:100%;
-      max-width:720px;
-      background:var(--card);
-      border:1px solid var(--ring);
-      border-radius:20px;
-      padding:28px;
-      box-shadow: 0 10px 35px rgba(0,0,0,.25);
+
+    .name {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
     }
-    .header{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      margin-bottom:10px;
+
+    .tagline {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 25px;
     }
-    .avatar{
-      width:56px;height:56px;border-radius:14px;
-      display:grid;place-items:center;
-      background:linear-gradient(135deg,#3b82f6, #8b5cf6);
-      color:white;font-weight:700;font-size:22px;
-      letter-spacing:.5px;
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
-    h1{font-size:1.4rem;line-height:1.2;margin:0}
-    .sub{color:var(--muted);margin:2px 0 0 0;font-size:.95rem}
-    .list{
-      margin-top:18px;
-      display:grid;
-      gap:12px;
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: all 0.3s ease;
     }
-    .item{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      padding:14px 16px;
-      border:1px solid var(--ring);
-      border-radius:14px;
-      background: color-mix(in hsl, var(--card), #ffffff 3%);
+
+    .link:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
     }
-    .icon{width:22px;height:22px;flex:0 0 22px;opacity:.95}
-    .label{
-      font-size:.82rem;
-      color:var(--muted);
-      letter-spacing:.02em;
-    }
-    .value{
-      display:block;
-      font-size:1rem;
-      font-weight:600;
-      margin-top:2px;
-      word-break:break-word;
-    }
-    .link{
-      color:var(--text);
-      text-decoration:none;
-      border-bottom:1px dashed color-mix(in srgb, var(--accent) 70%, transparent);
-    }
-    .link:hover{color:var(--accent)}
-    .footer{
-      margin-top:18px;
-      display:flex;gap:10px;flex-wrap:wrap;
-      color:var(--muted);font-size:.85rem;
-      justify-content:space-between;align-items:center;
-    }
-    .btn{
-      appearance:none;border:1px solid var(--ring);background:transparent;
-      color:var(--text);padding:10px 14px;border-radius:12px;
-      cursor:pointer;font-weight:600;
-    }
-    .btn:active{transform:translateY(1px)}
-    .note{opacity:.85}
-    @media (max-width:480px){
-      .card{padding:18px}
-      .item{padding:12px}
+
+    .link svg {
+      width: 20px;
+      height: 20px;
     }
   </style>
-
-  <!-- Structured data (optional, nice for search engines) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Jeevanantham Sankaran",
-    "email":"mailto:jeevaofficial1407@gmail.com",
-    "telephone":"+918838813020",
-    "sameAs":["https://www.linkedin.com/in/jeevananthamsankaran/"]
-  }
-  </script>
 </head>
 <body>
-  <main class="card" role="main">
-    <header class="header">
-      <div class="avatar" aria-hidden="true">JS</div>
-      <div>
-        <h1>Jeevanantham Sankaran</h1>
-        <p class="sub">Contact Card</p>
-      </div>
-    </header>
+  <div class="card">
+    <div class="name">Jeevanantham Sankaran</div>
+    <div class="tagline">Let’s Connect</div>
 
-    <section class="list" aria-label="Contact methods">
-      <!-- Phone -->
-      <article class="item">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <path stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
-            d="M22 16.92v2a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3.1 4.18 2 2 0 0 1 5.07 2h2a2 2 0 0 1 2 1.72c.12.88.32 1.73.6 2.54a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6.86 6.86l1.27-1.27a2 2 0 0 1 2.11-.45c.81.28 1.66.48 2.54.6A2 2 0 0 1 22 16.92z" />
-          </svg>
-        <div>
-          <div class="label">Phone</div>
-          <a class="value link" href="tel:+918838813020">+91&nbsp;8838813020</a>
-        </div>
-      </article>
-
-      <!-- Email -->
-      <article class="item">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <path stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
-            d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
-          <path stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
-            d="m22 6-10 7L2 6" />
+    <div class="links">
+      <a href="tel:+918838813020" class="link">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 5a2 2 0 012-2h1.28a2 2 0 011.94 1.52l.53 2.12a2 2 0 01-.45 1.82l-1.2 1.2a16 16 0 006.36 6.36l1.2-1.2a2 2 0 011.82-.45l2.12.53a2 2 0 011.52 1.94V19a2 2 0 01-2 2h-1C9.82 21 3 14.18 3 6V5z"/>
         </svg>
-        <div>
-          <div class="label">Email</div>
-          <a class="value link" href="mailto:jeevaofficial1407@gmail.com">jeevaofficial1407@gmail.com</a>
-        </div>
-      </article>
+        +91 8838813020
+      </a>
 
-      <!-- LinkedIn -->
-      <article class="item">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <circle cx="4.98" cy="4.98" r="2.5" stroke-width="1.6"></circle>
-          <path stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
-            d="M9 8h3.6v2.2h.05C13.6 8.9 15.3 8 17.3 8c4 0 4.7 2.6 4.7 6v6h-3.8v-5.4c0-1.3 0-3-1.9-3s-2.2 1.5-2.2 2.9V20H9V8zM4 9h4v11H4z"/>
+      <a href="mailto:jeevaofficial1407@gmail.com" class="link">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M16 12H8m0 0l-4-4m4 4l-4 4m8-4h8"/>
         </svg>
-        <div>
-          <div class="label">LinkedIn</div>
-          <a class="value link" href="https://www.linkedin.com/in/jeevananthamsankaran/" target="_blank" rel="noopener">linkedin.com/in/jeevananthamsankaran</a>
-        </div>
-      </article>
-    </section>
+        jeevaofficial1407@gmail.com
+      </a>
 
-    <section class="footer">
-      <button class="btn" id="copyBtn" type="button">Copy all to clipboard</button>
-      <div class="note" id="copiedNote" aria-live="polite"></div>
-    </section>
-  </main>
-
-  <script>
-    const copyBtn = document.getElementById('copyBtn');
-    const note = document.getElementById('copiedNote');
-    copyBtn.addEventListener('click', async () => {
-      const text = [
-        'Phone: +91 8838813020',
-        'Email: jeevaofficial1407@gmail.com',
-        'LinkedIn: https://www.linkedin.com/in/jeevananthamsankaran/'
-      ].join('\\n');
-      try {
-        await navigator.clipboard.writeText(text);
-        note.textContent = 'Copied!';
-        setTimeout(()=> note.textContent='', 1600);
-      } catch {
-        note.textContent = 'Copy failed. Long-press to select.';
-        setTimeout(()=> note.textContent='', 2000);
-      }
-    });
-  </script>
+      <a href="https://www.linkedin.com/in/jeevananthamsankaran/" target="_blank" class="link">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 
+               2.76 2.24 5 5 5h14c2.76 0 
+               5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 
+               19h-3v-10h3v10zm-1.5-11.27c-.97 
+               0-1.75-.79-1.75-1.76s.78-1.75 
+               1.75-1.75 1.75.78 
+               1.75 1.75-.78 1.76-1.75 1.76zm13.5 
+               11.27h-3v-5.6c0-1.33-.03-3.05-1.86-3.05-1.86 
+               0-2.15 1.45-2.15 2.95v5.7h-3v-10h2.88v1.37h.04c.4-.75 
+               1.38-1.54 2.85-1.54 3.05 0 3.61 2.01 
+               3.61 4.63v5.54z"/>
+        </svg>
+        LinkedIn Profile
+      </a>
+    </div>
+  </div>
 </body>
 </html>
